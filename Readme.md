@@ -14,22 +14,13 @@ Para poder ejecutar este proyecto necesitas tener instalado:
     - AWS CLI
 
 ## Despliegue en local
+Para desplegar la aplicación en local, sigue los siguientes pasos:
 
-> **Nota:**
->   
->   Modificar el archivo .env-example con los datos de conexión a la base de datos.
->
+    - Modificar el archivo .env-example con los datos de conexión a la base de datos.
+    - Lanzar el docker-compose: docker-compose up -d
+    - Lanzar el comando para realizar las migraciones de la base de datos:  
+        docker-compose exec app-laravel php artisan migrate --force
 
-Para desplegar la aplicación en local, ejecuta el siguiente comando:
+Se desplegará la aplicación en el puerto 8080 de tu máquina local.
+Para acceder a la aplicación, abre un navegador y accede a la URL `http://localhost:8080`
 
-    docker-compose up -d
-    
->
-> **Nota:**
->    Lanzar el comando para realizar las migraciones de la base de datos:
->
->    docker-compose exec web php artisan migrate --force
->
-
-Desplegará la aplicación en el puerto 8080 de tu máquina local.
-Para acceder a la aplicación, abre un navegador y accede a la URL `http://localhost:8080`.

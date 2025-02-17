@@ -5,8 +5,6 @@
 FROM php:8.4-apache
 # Workdir
 WORKDIR /var/www/html
-# User www-data for Apache web app
-USER www-data
 # Copy files
 COPY ./src /var/www/html
 # Install dependencies
